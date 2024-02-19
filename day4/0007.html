@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="target">
+
+    </div>
+    <script>
+        let alcohol= ['소주', '맥주', '위스키', '양주' ];
+        let $target = $('#target');
+
+        for(let o of alcohol) {
+            $('#target').append(`<p class="alcohol">${o}</p>`)
+        }
+
+        $('.alcohol').on('click', function() {
+            alert($(this).text() + 너다);
+        })
+    </script>
+</body>
+</html>

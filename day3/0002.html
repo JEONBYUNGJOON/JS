@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>덧셈기</title>
+</head>
+<body>
+    <input type="text" id="num1">
+    *
+    <input type="text" id="num2">
+    =
+    <input type="text" id="result" disabled>
+    <button id="곱셈">계산</button>
+    <script>
+
+        let $num1 = $('#num1');
+        let $num2 = $('#num2');
+        let $result = $('#result');
+        let $곱셈 = $('#곱셈');
+
+        $곱셈.on('click', function() {
+            // callback
+            let num = parseInt($num1.val()) * parseInt($num2.val());
+            $result.val(num);
+        })
+    </script>
+</body>
+</html>

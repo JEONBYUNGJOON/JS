@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #target { height: 100px; width: 100px; background-color: red;}
+    </style>
+</head>
+<body>
+    <div id="target"></div>
+    <button id="toggleShape">Toggle Shape</button>
+    <script>
+        let $target = $('#target');
+        let $toggleButton = $('#toggleShape');
+
+        $toggleButton.on('click', function() {
+            let currentRadius = parseInt($target.css('border-radius'));
+            
+            if (currentRadius === 0) {
+                $target.css('border-radius', '100px').css('background-color', 'blue');
+            } else {
+                $target.css('border-radius', '0px').css('background-color', 'red');
+            }
+        });
+    </script>
+</body>
+</html>
